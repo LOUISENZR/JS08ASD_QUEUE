@@ -25,11 +25,18 @@ public class QueueMain {
                     System.out.print("Masukan data baru: ");
                     int dataMasuk = sc16.nextInt();
                     Q.Enqueue(dataMasuk);
+                    if(Q.IsFull()){
+                        System.out.println("DATA SUDAH PENUH");
+                        pilih = 9;
+                    }
                     break;
                 case 2:
                     int dataKeluar = Q.Dequeue();
                     if(dataKeluar !=0){
                         System.out.println("Data yang dikeeluaarkan: "+ dataKeluar);
+                        break;
+                    }else{
+                        pilih = 9;
                         break;
                     }
                 case 3:
